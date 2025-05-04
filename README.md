@@ -71,3 +71,31 @@ Doodles is a task management application designed to help users organize their t
    ```
 
 ## Project Structure
+
+```
+doodles/
+├── frontend/
+│   └── my-project/
+│       ├── app/                    # Next.js app router pages
+│       ├── components/             # React components
+│       │   ├── ui/                # Reusable UI components
+│       │   └── dashboard/         # Dashboard specific components
+│       ├── context/               # React context providers
+│       ├── lib/                   # Utility functions
+│       └── public/                # Static assets
+│
+├── backend/
+│   ├── src/
+│   │   ├── controllers/          # Route controllers
+│   │   ├── middlewares/         # Express middlewares
+│   │   ├── routes/              # API routes
+│   │   └── server.js           # Express app setup
+│   │
+│   └── prisma/                 # Prisma schema and migrations
+│       ├── schema.prisma       # Database schema
+│       └── migrations/         # Database migrations
+```
+
+## License
+
+This project is licensed under the MIT License.
