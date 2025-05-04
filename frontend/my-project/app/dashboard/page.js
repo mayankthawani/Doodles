@@ -8,11 +8,13 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { 
   ListTodo, Search, PlusCircle, CheckCircle2, Clock, 
-  AlertCircle, ArrowUpRight, BarChart2 
+  AlertCircle, ArrowUpRight, BarChart2, Calendar as CalendarIcon 
 } from "lucide-react";
+import { TaskCalendar } from '@/components/Calendar';
 
 export default function Dashboard() {
   const { tasks, filters, setFilters } = useTaskContext();
+  const [showCalendar, setShowCalendar] = useState(false);
   
   // Calculate task statistics
   const stats = {
@@ -142,14 +144,36 @@ export default function Dashboard() {
             </select>
           </div>
 
-          <Button variant="outline" className="border-white/10 hover:border-white/20">
-            <BarChart2 className="h-4 w-4 mr-2" />
-            View Analytics
+          <Button
+            variant="outline"
+            className="border-white/10 hover:border-white/20"
+            onClick={() => setShowCalendar(true)}
+          >
+            <CalendarIcon className="h-4 w-4 mr-2" />
+            Calendar
           </Button>
         </div>
 
-        {/* Existing Kanban Board */}
         <KanbanBoard />
+
+        {/* Calendar Modal */}
+        {showCalendar && (
+          <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+            <div className="bg-slate-900 p-6 rounded-lg w-full max-w-lg">
+              <div className="flex justify-between items-center mb-4">
+                <h2 className="text-xl font-semibold text-white">Calendar View</h2>
+                <Button
+                  variant="ghost"
+                  size="sm"
+                  onClick={() => setShowCalendar(false)}
+                >
+                  ✕
+                </Button>
+              </div>
+              <TaskCalendar />
+            </div>
+          </div>
+        )}
       </main>
     </div>
   );

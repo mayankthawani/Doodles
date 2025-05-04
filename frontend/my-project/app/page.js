@@ -103,6 +103,8 @@ export default function Home() {
           <Image
                 src="/app-preview.png" 
                 alt="App Preview"
+                width={600}
+                height={400}
                 className="relative rounded-xl border border-white/10 shadow-2xl"
               />
             </div>
