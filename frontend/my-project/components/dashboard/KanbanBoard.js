@@ -5,6 +5,8 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Trash2 } from 'lucide-react'; // Add this import at the top
 import { Button } from "@/components/ui/button"; // Add this import at the top
+import { CardHeader, CardTitle } from "@/components/ui/card";
+ // Add this import at the top
 
 const statusColumns = [
   { id: 'TODO', title: 'To Do', color: 'bg-slate-500' },
@@ -25,7 +27,7 @@ const TaskCard = ({ task }) => {
               </Badge>
             )}
           </div>
-          <PriorityIndicator priority={task.priority} />
+        
         </div>
       </CardHeader>
       {/* ...rest of the card content... */}

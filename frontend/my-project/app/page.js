@@ -2,6 +2,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, CheckCircle, Clock, ListTodo, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 export default function Home() {
@@ -80,7 +81,7 @@ export default function Home() {
                 Why Choose Doodles?
               </h2>
               <p className="text-gray-400 text-lg">
-                Doodles is more than just a task manager. It's your personal productivity companion 
+                Doodles is more than just a task manager. It&apos;s your personal productivity companion 
                 designed to help you achieve your goals with ease and style.
               </p>
               <div className="space-y-4">
@@ -99,7 +100,7 @@ export default function Home() {
             </div>
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 rounded-xl blur-3xl" />
-              <img 
+          <Image
                 src="/app-preview.png" 
                 alt="App Preview"
                 className="relative rounded-xl border border-white/10 shadow-2xl"
