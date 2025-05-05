@@ -96,6 +96,5 @@ doodles/
 │       └── migrations/         # Database migrations
 ```
 
-## License
-
-This project is licensed under the MIT License.
+## Loom Video 
+https://www.loom.com/share/cb98e25809cc4713bf31b08bba0d6cd8?sid=ee499f24-ad88-4278-aea5-bec5e4cae231
